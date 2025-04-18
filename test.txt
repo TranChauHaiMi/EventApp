@@ -1,0 +1,6 @@
+git add .
+git commit -m "input here...."
+git push / git push -u origin main
+
+-----------------
+git pull
