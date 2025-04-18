@@ -107,7 +107,7 @@ function EventPage() {
                                         Chú thích sự kiện
                                     </h3>
                                     <ul className="space-y-2 text-blue-700">
-                                        <li>• Vui lòng có mặt trước giờ bắt sự kiện trước 30 phút</li>
+                                        <li>• Vui lòng có mặt trước giờ sự kiện bắt đầu 30 phút</li>
                                         <li>• Vé đã mua sẽ không được hoàn trả (trừ khi có lỗi xảy ra từ phía tổ chức sự kiện)</li>
                                         <li>• Giới hạn độ tuổi: 18+</li>
                                     </ul>
