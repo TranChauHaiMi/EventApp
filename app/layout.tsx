@@ -29,7 +29,7 @@ export const clerkLocalization = {
   badge__primary: "Chính",
   badge__thisDevice: "Thiết bị này",
   userButton: {
-    action__manageAccount: "Chỉnh sửa tài khoản",
+    action__manageAccount: "Thông tin tài khoản",
     action__signOut: "Đăng xuất",
     action__signOutAll: "Đăng xuất tất cả thiết bị",
     action__addAccount: "Thêm tài khoản",
@@ -74,7 +74,7 @@ export const clerkLocalization = {
     },
     profilePage: {
       title: "Thông tin cá nhân",
-      imageFormSubtitle: "Lưu",
+      imageFormSubtitle: "Tải lên",
       imageFormDestructiveActionSubtitle: "Gỡ bỏ",
       fileDropAreaHint:"Khuyến khích kích thước 1:1, nhỏ hơn 10MB",
     },
