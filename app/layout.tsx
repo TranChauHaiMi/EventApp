@@ -38,6 +38,7 @@ export const clerkLocalization = {
     formButtonReset: "Hủy",
     formButtonPrimary__save: "Lưu",
     formButtonPrimary__add: "Thêm",
+    formButtonPrimary__remove: "Gỡ bỏ",
     navbar:{
       title: "Tài khoản",
       description: "Quản lý thông tin tài khoản",
@@ -47,6 +48,11 @@ export const clerkLocalization = {
     emailAddressPage:{
       title: "Thêm địa chỉ Email",
       formHint: "Bạn sẽ cần xác minh địa chỉ email này trước khi có thể thêm vào tài khoản của bạn",
+      removeResource:{
+        title : "Gỡ bỏ địa chỉ Email",
+        messageLine1: "Email này sẽ được gỡ bỏ khỏi tài khoản của bạn",
+        messageLine2: "Bạn sẽ không thể đăng nhập bằng địa chỉ Email này nữa",
+      },
     },
     start: {
       headerTitle__account: "Thông tin tài khoản",
