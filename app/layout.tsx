@@ -132,6 +132,7 @@ export default function RootLayout({
             <SyncUserWithConvex />
             {children}
 
+
             <Toaster />
           </ClerkProvider>
         </ConvexClientProvider>
