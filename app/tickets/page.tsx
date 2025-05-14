@@ -29,13 +29,13 @@ function Ticekts() {
             <div className="max-w-6xl mx-auto">
                 <div className="flex items-center justify-between mb-8">
                     <div>
-                        <h1 className="text-3xl font-bold text-gray-900">Vé của tôi</h1>
-                        <p className="mt-2 text-gray-600">
+                        <h1 className="text-3xl font-bold text-pink-700">Vé của tôi</h1>
+                        <p className="mt-2 text-pink-700">
                             Quản lý vé xem tất cả vé của bạn tại đây
                         </p>
                     </div>
-                     <div className="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100">
-                        <div className="flex items-center gap-2 text-gray-600">
+                     <div className="bg-white px-4 py-2 rounded-lg shadow-sm border border-pastel-pink-100">
+                        <div className="flex items-center gap-2 text-pink-700">
                             <span className="font-medium">
                                 Tổng số vé {tickets.length}
                             </span>
@@ -46,7 +46,7 @@ function Ticekts() {
 
                 {upcomingTickets.length > 0 && (
                     <div className="mb-12">
-                        <h2 className="text-xl font-semibold text-gray-900 mb-4">
+                        <h2 className="text-xl font-semibold text-pink-700 mb-4">
                             Sự kiện sắp diễn ra
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -59,7 +59,7 @@ function Ticekts() {
 
                 {pastTickets.length > 0 && (
                     <div className="mb-12">
-                        <h2 className="text-xl font-semibold text-gray-900 mb-4">
+                        <h2 className="text-xl font-semibold text-pink-700 mb-4">
                             Sự kiện đã diễn ra
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -72,7 +72,7 @@ function Ticekts() {
 
                 {otherTickets.length > 0 && (
                     <div>
-                        <h2 className="text-xl font-semibold text-gray-900 mb-4">
+                        <h2 className="text-xl font-semibold text-pink-700 mb-4">
                             Các vé khác
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -60,7 +60,7 @@ function Search() {
                 {/* Upcoming Events */}
                 {upcomingEvents.length > 0 && (
                     <div className="mb-12">
-                        <h2 className="text-xl font-semibold text-gray-900 mb-6">
+                        <h2 className="text-xl font-semibold text-pink-700 mb-6">
                             Sự kiện sắp diễn ra
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -74,7 +74,7 @@ function Search() {
                 {/* Past Events */}
                 {pastEvents.length > 0 && (
                     <div>
-                        <h2 className="text-xl font-semibold text-gray-900 mb-6">
+                        <h2 className="text-xl font-semibold text-pink-700 mb-6">
                             Sự kiện đã diễn ra
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

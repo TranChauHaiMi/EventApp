@@ -67,9 +67,9 @@ function SellerDashboard() {
         <div className="max-w-3xl mx-auto p-6">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                 {/* Header Section */}
-                <div className="bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-8 text-white">
+                <div className="bg-gradient-to-r from-pastel-pink to-pink-200 px-6 py-8 text-pink-700">
                     <h2 className="text-2xl font-bold">Quản lý bán vé</h2>
-                    <p className="text-blue-100 mt-2">
+                    <p className="text-pink-700 mt-2">
                         Quản lý hồ sơ người bán vé và cài đặt thanh toán
                     </p>
                 </div>
@@ -88,7 +88,7 @@ function SellerDashboard() {
                                 <div className="flex justify-center gap-4">
                                     <Link
                                         href="/seller/new-event"
-                                        className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                                        className="flex items-center gap-2 bg-pastel-pink text-pink-700 px-4 py-2 rounded-lg hover:bg-pink-200 transition-colors"
                                     >
                                         <Plus className="w-5 h-5" />
                                         Tạo sự kiện
@@ -134,7 +134,7 @@ function SellerDashboard() {
                                     setAccountCreatePending(false);
                                 }
                                 }}
-                                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                                className="bg-pastel-pink text-pink-700 px-6 py-2 rounded-lg hover:bg-pink-200 transition-colors"
                             >
                                 Tạo tài khoản người bán
                             </button>
@@ -285,7 +285,7 @@ function SellerDashboard() {
                                 {accountStatus.isActive && (
                                     <button
                                         onClick={handleManageAccount}
-                                        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center"
+                                        className="bg-pastel-pink text-pink-700 px-4 py-2 rounded-lg hover:bg-pink-200 transition-colors flex items-center"
                                     >
                                         <Cog className="w-4 h-4 mr-2" />
                                         Quản lý bán vé

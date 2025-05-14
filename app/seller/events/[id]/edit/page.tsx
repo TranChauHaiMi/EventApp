@@ -18,9 +18,9 @@ export default function EditEventPage() {
     return (
         <div className="max-w-3xl mx-auto p-6">
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <div className="bg-gradient-to-r from-blue-600 to-blue-800 px-6 py-8 text-white">
+                <div className="bg-gradient-to-r from-pastel-pink to-pastel-pink px-6 py-8 text-pink-700">
                     <h2 className="text-2xl font-bold">Chỉnh sửa sự kiện</h2>
-                    <p className="text-blue-100 mt-2">Cập nhật chi tiết cho sự kiện của bạn</p>
+                    <p className="text-pink-700 mt-2">Cập nhật chi tiết cho sự kiện của bạn</p>
                 </div>
 
                 <div className="p-6">

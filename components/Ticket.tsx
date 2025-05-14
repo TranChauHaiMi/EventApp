@@ -49,7 +49,7 @@ function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
                 </div>
                 )}
                 <div
-                    className={`px-6 py-4 ${imageUrl ? "absolute bottom-0 left-0 right-0" : ticket.event.is_cancelled ? "bg-red-600" : "bg-blue-600"} `}
+                    className={`px-6 py-4 ${imageUrl ? "absolute bottom-0 left-0 right-0" : ticket.event.is_cancelled ? "bg-red-600" : "bg-pastel-pink"} `}
                 >
                     <h2
                         className={`text-2xl font-bold ${imageUrl || !imageUrl ? "text-white" : "text-black"}`}
@@ -69,19 +69,19 @@ function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
                     <div className="space-y-4">
                         <div className="flex items-center text-gray-600">
                             <CalendarDays
-                                className={`w-5 h-5 mr-3 ${ticket.event.is_cancelled ? "text-red-600" : "text-blue-600"}`}
+                                className={`w-5 h-5 mr-3 ${ticket.event.is_cancelled ? "text-red-600" : "text-pink-700"}`}
                             />
                             <div>
-                                <p className="text-sm text-gray-500">Ngày diễn ra</p>
+                                <p className="text-sm text-gray-500">Giờ và ngày diễn ra</p>
                                 <p className="font-medium">
-                                    {new Date(ticket.event.eventDate).toLocaleDateString()}
+                                    {new Date(ticket.event.eventDate).toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit'}) + ' - ' + new Date(ticket.event.eventDate).toLocaleDateString()}
                                 </p>
                             </div>
                         </div>
 
                         <div className="flex items-center text-gray-600">
                             <MapPin
-                                className={`w-5 h-5 mr-3 ${ticket.event.is_cancelled ? "text-red-600" : "text-blue-600"}`}
+                                className={`w-5 h-5 mr-3 ${ticket.event.is_cancelled ? "text-red-600" : "text-pink-700"}`}
                             />
                             <div>
                                 <p className="text-sm text-gray-500">Địa điểm</p>
@@ -91,7 +91,7 @@ function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
 
                         <div className="flex items-center text-gray-600">
                             <User
-                                className={`w-5 h-5 mr-3 ${ticket.event.is_cancelled ? "text-red-600" : "text-blue-600"}`}
+                                className={`w-5 h-5 mr-3 ${ticket.event.is_cancelled ? "text-red-600" : "text-pink-700"}`}
                             />
                             <div>
                                 <p className="text-sm text-gray-500">Người sở hữu vé</p>
@@ -102,7 +102,7 @@ function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
 
                         <div className="flex items-center text-gray-600 break-all">
                             <IdCard
-                                className={`w-5 h-5 mr-3 ${ticket.event.is_cancelled ? "text-red-600" : "text-blue-600"}`}
+                                className={`w-5 h-5 mr-3 ${ticket.event.is_cancelled ? "text-red-600" : "text-pink-700"}`}
                             />
                             <div>
                                 <p className="text-sm text-gray-500">ID Người sở hữu vé</p>
@@ -112,7 +112,7 @@ function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
 
                         <div className="flex items-center text-gray-600">
                             <TicketIcon
-                                className={`w-5 h-5 mr-3 ${ticket.event.is_cancelled ? "text-red-600" : "text-blue-600"}`}
+                                className={`w-5 h-5 mr-3 ${ticket.event.is_cancelled ? "text-red-600" : "text-pink-700"}`}
                             />
                             <div>
                                 <p className="text-sm text-gray-500">Giá vé</p>
@@ -161,7 +161,7 @@ function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
                     Thời gian mua vé: {new Date(ticket.purchasedAt).toLocaleString()}
                 </span>
                 <span
-                    className={`text-sm font-medium ${ticket.event.is_cancelled ? "text-red-600" : "text-blue-600"}`}
+                    className={`text-sm font-medium ${ticket.event.is_cancelled ? "text-red-600" : "text-pink-700"}`}
                 >
                     {ticket.event.is_cancelled ? "Đã hủy" : "Vé hợp lệ"}
                 </span>

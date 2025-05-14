@@ -255,23 +255,55 @@ function EventForm({ mode, initialData }: EventFormProps) {
                         name="eventDate"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Ngày diễn ra</FormLabel>
-                                <FormControl>
-                                    <Input
-                                        type="date"
-                                        {...field}
-                                        onChange={(e) => {
-                                        field.onChange(
-                                            e.target.value ? new Date(e.target.value) : null
-                                        );
-                                        }}
-                                        value={
-                                        field.value
-                                            ? new Date(field.value).toISOString().split("T")[0]
-                                            : ""
-                                        }
-                                    />
-                                </FormControl>
+                                <FormLabel>Giờ và ngày diễn ra</FormLabel>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <FormControl>
+                                            <Input
+                                                type="time"
+                                                value={field.value ? 
+                                                    `${new Date(field.value).getHours().toString().padStart(2, '0')}:${new Date(field.value).getMinutes().toString().padStart(2, '0')}` 
+                                                    : ""}
+                                                onChange={(e) => {
+                                                    try {
+                                                        const [hours, minutes] = e.target.value.split(':').map(Number);
+                                                        const newDate = new Date(field.value || new Date());
+                                                        newDate.setHours(hours, minutes, 0, 0);
+                                                        field.onChange(newDate);
+                                                    } catch (error) {
+                                                        console.log("Lỗi giờ:", error);
+                                                    }
+                                                }}
+                                            />
+                                        </FormControl>
+                                        {/* <p className="text-xs text-gray-500 mt-1">Chọn giờ</p> */}
+                                    </div>
+                                    <div>
+                                        <FormControl>
+                                            <Input
+                                                type="date"
+                                                {...field}
+                                                onChange={(e) => {
+                                                    try {
+                                                        // Giữ giờ hiện tại khi chỉ thay đổi ngày
+                                                        const currentDate = field.value || new Date();
+                                                        const newDate = new Date(e.target.value);
+                                                        newDate.setHours(
+                                                            currentDate.getHours(),
+                                                            currentDate.getMinutes(),
+                                                            0, 0
+                                                        );
+                                                        field.onChange(newDate);
+                                                    } catch (error) {
+                                                        console.log("Lỗi ngày:", error);
+                                                    }
+                                                }}
+                                                value={field.value ? new Date(field.value).toISOString().split("T")[0] : ""}
+                                            />
+                                        </FormControl>
+                                        {/* <p className="text-xs text-gray-500 mt-1">Chọn ngày</p> */}
+                                    </div>
+                                </div>
                                 <FormMessage />
                             </FormItem>
                         )}
@@ -364,8 +396,8 @@ function EventForm({ mode, initialData }: EventFormProps) {
                                         file:mr-4 file:py-2 file:px-4
                                         file:rounded-full file:border-0
                                         file:text-sm file:font-semibold
-                                        file:bg-blue-50 file:text-blue-700
-                                        hover:file:bg-blue-100"
+                                        file:bg-pink-50 file:text-pink-700
+                                        hover:file:bg-pink-100"
                                 />
                             )}
                         </div>
@@ -375,7 +407,7 @@ function EventForm({ mode, initialData }: EventFormProps) {
                 <Button
                     type="submit"
                     disabled={isPending}
-                    className="w-full bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
+                    className="w-full bg-gradient-to-r from-pastel-pink to-pastel-pink hover:from-pink-200 hover:to-pink-200 text-pink-700 font-medium py-2 px-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
                 >
                     {isPending ? (
                         <>

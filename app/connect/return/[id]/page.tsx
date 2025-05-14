@@ -23,10 +23,10 @@ export default function Return() {
                     <div className="p-6">
                         <div className="space-y-4">
                             <div className="bg-green-50 border border-green-100 rounded-lg p-4">
-                                <h3 className="font-medium text-green-900 mb-1">
+                                <h3 className="font-medium text-pink-900 mb-1">
                                     Tiếp theo sẽ là gì?
                                 </h3>
-                                <ul className="text-sm text-green-700 space-y-2">
+                                <ul className="text-sm text-pink-700 space-y-2">
                                     <li>• Bạn có thể tạo và bán vé cho các sự kiện</li>
                                     <li>
                                         • Thanh toán sẽ được xử lý thông qua tài khoản Stripe của bạn
@@ -37,7 +37,7 @@ export default function Return() {
 
                             <Link
                                 href="/seller"
-                                className="w-full bg-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
+                                className="w-full bg-pastel-pink text-pink-700 text-center py-3 px-4 rounded-lg font-medium hover:bg-pink-200 transition-colors duration-200 flex items-center justify-center gap-2"
                             >
                                 Đi đến Quản lý bán vé
                                 <ArrowRight className="w-4 h-4" />

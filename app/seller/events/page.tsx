@@ -17,20 +17,20 @@ export default async function SellerEventsPage() {
                         <div className="flex items-center gap-4">
                             <Link
                                 href="/seller"
-                                className="text-gray-500 hover:text-gray-700 transition-colors"
+                                className="text-pink-500 hover:text-pink-700 transition-colors"
                             >
                                 <ArrowLeft className="w-5 h-5" />
                             </Link>
                             <div>
-                                <h1 className="text-2xl font-bold text-gray-900">Sự kiện của tôi</h1>
-                                <p className="mt-1 text-gray-500">
+                                <h1 className="text-2xl font-bold text-pink-700">Sự kiện của tôi</h1>
+                                <p className="mt-1 text-pink-700">
                                     Quản lý danh sách các sự kiện và theo dõi doanh thu
                                 </p>
                             </div>
                         </div>
                         <Link
                             href="/seller/new-event"
-                            className="flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                            className="flex items-center justify-center gap-2 bg-pastel-pink text-pink-700 px-4 py-2 rounded-lg hover:bg-pink-200 transition-colors"
                         >
                             <Plus className="w-5 h-5" />
                             Tạo sự kiện

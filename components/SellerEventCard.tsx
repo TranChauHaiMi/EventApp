@@ -46,7 +46,7 @@ function SellerEventCard( {
                     {/* Event Details */}
                     <div className="flex-1 min-w-0">
                         <div className="flex items-start justify-between gap-4">
-                            <div>
+                            <div className="flex-1 min-w-0">
                                 <h3 className="text-xl font-semibold text-gray-900">
                                     {event.name}
                                 </h3>
@@ -60,12 +60,12 @@ function SellerEventCard( {
                                     </div>
                                 )}
                             </div>
-                            <div className="flex items-center gap-2">
+                            <div className="flex-shrink-0 flex items-center gap-2">
                                 {!isPastEvent && !event.is_cancelled && (
                                 <>
                                     <Link
                                     href={`/seller/events/${event._id}/edit`}
-                                    className="shrink-0 flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
+                                    className="flex-shrink-0 flex items-center justify-center gap-2 px-4 py-2 min-w-20 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
                                     >
                                     <Edit className="w-4 h-4" />
                                         Chỉnh sửa
@@ -124,10 +124,10 @@ function SellerEventCard( {
                             <div className="bg-gray-50 p-3 rounded-lg">
                                 <div className="flex items-center gap-2 text-gray-600 mb-1">
                                     <CalendarDays className="w-4 h-4" />
-                                    <span className="text-sm font-medium">Ngày diễn ra</span>
+                                    <span className="text-sm font-medium">Giờ và ngày diễn ra</span>
                                 </div>
                                 <p className="text-sm font-medium text-gray-900">
-                                    {new Date(event.eventDate).toLocaleDateString()}
+                                    {new Date(event.eventDate).toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit'}) + ' - ' + new Date(event.eventDate).toLocaleDateString()}
                                 </p>
                             </div>
 

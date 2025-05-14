@@ -65,17 +65,17 @@ function EventPage() {
                                 <div className="grid grid-cols-2 gap-6">
                                     <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
                                         <div className="flex items-center text-gray-600 mb-1">
-                                            <CalendarDays className="w-5 h-5 mr-2 text-blue-600" />
-                                            <span className="text-sm font-medium">Ngày diễn ra</span>
+                                            <CalendarDays className="w-5 h-5 mr-2 text-pink-700" />
+                                            <span className="text-sm font-medium">Giờ và ngày diễn ra</span>
                                         </div>
                                         <p className="text-gray-900">
-                                            {new Date(event.eventDate).toLocaleDateString()}
+                                            {new Date(event.eventDate).toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit'}) + ' - ' + new Date(event.eventDate).toLocaleDateString()}
                                         </p>
                                     </div>
 
                                     <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
                                         <div className="flex items-center text-gray-600 mb-1">
-                                            <MapPin className="w-5 h-5 mr-2 text-blue-600" />
+                                            <MapPin className="w-5 h-5 mr-2 text-pink-700" />
                                             <span className="text-sm font-medium">Địa chỉ</span>
                                         </div>
                                         <p className="text-gray-900">{event.location}</p>
@@ -83,7 +83,7 @@ function EventPage() {
 
                                     <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
                                         <div className="flex items-center text-gray-600 mb-1">
-                                            <Ticket className="w-5 h-5 mr-2 text-blue-600" />
+                                            <Ticket className="w-5 h-5 mr-2 text-pink-700" />
                                             <span className="text-sm font-medium">Giá vé</span>
                                         </div>
                                         <p className="text-gray-900">{event.price.toLocaleString('vi-VN')}đ</p>
@@ -91,7 +91,7 @@ function EventPage() {
 
                                     <div className="bg-gray-50 p-4 rounded-lg border border-gray-100">
                                         <div className="flex items-center text-gray-600 mb-1">
-                                            <Users className="w-5 h-5 mr-2 text-blue-600" />
+                                            <Users className="w-5 h-5 mr-2 text-pink-700" />
                                             <span className="text-sm font-medium">Tình trạng vé</span>
                                         </div>
                                         <p className="text-gray-900">
@@ -102,11 +102,11 @@ function EventPage() {
                                 </div>
 
                                 {/* Additional Event Information */}
-                                <div className="bg-blue-50 border border-blue-100 rounded-lg p-6">
-                                    <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                                <div className="bg-pink-50 border border-pink-100 rounded-lg p-6">
+                                    <h3 className="text-lg font-semibold text-pink-900 mb-2">
                                         Chú thích sự kiện
                                     </h3>
-                                    <ul className="space-y-2 text-blue-700">
+                                    <ul className="space-y-2 text-pink-700">
                                         <li>• Vui lòng có mặt trước giờ sự kiện bắt đầu 30 phút</li>
                                         <li>• Vé đã mua sẽ không được hoàn trả (trừ khi có lỗi xảy ra từ phía tổ chức sự kiện)</li>
                                         <li>• Giới hạn độ tuổi: 18+</li>

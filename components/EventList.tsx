@@ -30,13 +30,13 @@ function EventList() {
             {/* Header */}
             <div className="flex items-center justify-between mb-8">
                 <div>
-                    <h1 className="text-3xl font-bold text-gray-900">Sự kiện sắp diễn ra</h1>
-                    <p className="mt-2 text-gray-600">
+                    <h1 className="text-3xl font-bold text-pink-700">Sự kiện sắp diễn ra</h1>
+                    <p className="mt-2 text-pink-700">
                         Khám phá và đặt vé cho những sự kiện tuyệt vời
                     </p>
                 </div>
                 <div className="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-100">
-                    <div className="flex items-center gap-2 text-gray-600">
+                    <div className="flex items-center gap-2 text-pink-700">
                         <CalendarDays className="w-5 h-5" />
                         <span className="font-medium">
                             {upcomingEvents.length} Sự kiện sắp diễn ra
@@ -55,7 +55,7 @@ function EventList() {
             ) : (
                 <div className="bg-gray-50 rounded-lg p-12 text-center mb-12">
                     <Ticket className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                    <h3 className="text-lg font-medium text-gray-900">
+                    <h3 className="text-lg font-medium text-pink-700">
                         Không có sự kiện sắp diễn ra
                     </h3>
                     <p className="text-gray-600 mt-1">Kiểm tra lại sau để biết các sự kiện mới</p>
@@ -65,7 +65,7 @@ function EventList() {
             {/* Past Events Section */}
             {pastEvents.length > 0 && (
                 <>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Sự kiện đã diễn ra</h2>
+                    <h2 className="text-2xl font-bold text-pink-700 mb-6">Sự kiện đã diễn ra</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {pastEvents.map((event) => (
                         <EventCard key={event._id} eventId={event._id} />

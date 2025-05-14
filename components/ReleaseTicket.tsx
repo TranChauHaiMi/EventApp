@@ -45,7 +45,7 @@ function ReleaseTicket({
     return (
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
-                <button className="mt-2 w-full flex items-center justify-center gap-2 py-2 px-4 bg-red-100 text-red-700 rounded-lg hover:bg-red-200 transition">
+                <button className="mt-2 w-full flex items-center justify-center gap-2 py-2 px-4 bg-amber-100 text-red-700 rounded-lg hover:.bg-amber-200 transition">
                     <XCircle className="w-4 h-4" />
                     Hủy Giữ Vé
                 </button>

@@ -102,7 +102,7 @@ function PurchaseTicket({ eventId }: { eventId: Id<"events"> }) {
                 <button
                     onClick={handlePurchase}
                     disabled={isExpired || isLoading}
-                    className="w-full bg-gradient-to-r from-amber-500 to-amber-600 text-white px-8 py-4 rounded-lg font-bold shadow-md hover:from-amber-600 hover:to-amber-700 transform hover:scale-[1.02] transition-all duration-200 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed disabled:hover:scale-100 text-lg"
+                    className="w-full bg-pastel-pink text-pink-700 px-8 py-4 rounded-lg font-bold shadow-md hover:bg-pink-200 transform hover:scale-[1.02] transition-all duration-200 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed disabled:hover:scale-100 text-lg"
                 >
                     {isLoading
                         ? "Đi đến trang thanh toán..."

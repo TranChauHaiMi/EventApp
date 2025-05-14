@@ -36,9 +36,9 @@ export default function Refresh() {
             <div className="max-w-md w-full">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                     {/* Header */}
-                    <div className="bg-gradient-to-r from-blue-600 to-blue-700 p-6 text-white">
+                    <div className="bg-pastel-pink text-pink-700">
                         <h2 className="text-2xl font-bold mb-2">Thiết lập tài khoản</h2>
-                        <p className="text-blue-100">
+                        <p className="text-pink-100">
                             Hoàn tất thiết lập tài khoản để bắt đầu bán vé
                         </p>
                     </div>
@@ -60,7 +60,7 @@ export default function Refresh() {
                         </div>
                         ) : (
                             <div className="text-center py-8">
-                                <Loader2 className="w-12 h-12 text-blue-600 animate-spin mx-auto mb-4" />
+                                <Loader2 className="w-12 h-12 text-pink-700 animate-spin mx-auto mb-4" />
                                 <p className="text-gray-600">
                                 {accountLinkCreatePending
                                     ? "Đang tạo liên kết tài khoản..."
